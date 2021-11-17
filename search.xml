@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>面试经历</title>
+      <link href="/2021/11/05/mian-shi-jing-li/"/>
+      <url>/2021/11/05/mian-shi-jing-li/</url>
+      
+        <content type="html"><![CDATA[<h3 id="面试的感受2021-11-03"><a href="#面试的感受2021-11-03" class="headerlink" title="面试的感受2021/11/03"></a>面试的感受2021/11/03</h3><p>本菜鸡不知道怎么回事投到百度算法岗了，还是做推荐算法岗位，我明确看过不是算法岗记得。本来想投个后端实习一下挣钱，然后一面普天盖脸问我bert、transformer什么的给我整蒙了。</p><p>一面时候，面试官是个本校学姐，跟我谈了一下关于面试之外的的看法，她说你研一来工作，你整个人都在输出而不是输入，而研一是个一个输入的好时间，应该多看看paper学点知识，然后研二再去工业界，而且你来实习不会让你接触一些很算法的工作也是让你单纯的打杂，而你研一输入的东西对于你未来以后很有帮助。学姐一下子把焦虑的我说明白了，我也认真思考一下自己的规划和人生，也确实需要安心下来好好学习。</p><p>本科时候在摸鱼，大四在准备考研，以前接触过深度学习也感觉自己很菜，找不到学习的方法和要义。找实习的原因无非是混点大厂实习经历，然后可以督促自己学习，唉😔，自己原来还是太不上进了，现在知道至少自己该去做什么了。</p><p>整理一下大概的问题</p><ul><li><p>一面算法题 leetcode 4</p></li><li><p>二面算法题 二叉树C字形打印 （G了</p></li><li><p>算法题要求要用自己的编译器写，我忘了怎么建树了</p></li><li><p>bert模型知道吗，解释一下</p></li><li><p>transformer模型是什么，解释一下</p></li><li><p>self-attention的模型是什么，你还知道其他attention吗</p></li><li><p>项目相关</p><ul><li>有没有考虑pre-train bert</li><li>bert融合模型经验有吗</li><li>数据集大小、怎么处理，考虑对数据集做过处理吗</li></ul></li><li><p>激活函数有啥？sigmoid为啥梯度爆炸</p></li><li><p>手写一个pytorch模型</p></li></ul><p>感觉面试管人还是很好的，就是我太菜了，知道我学得菜没有问其他很难的问题，可以我最后算法题寄了呜呜呜。</p><h4 id="面试的感受2021-11-15"><a href="#面试的感受2021-11-15" class="headerlink" title="面试的感受2021/11/15"></a>面试的感受2021/11/15</h4><ul><li><p>三面</p><p>面试果真跟我同学说的一样，实习生一面过了大致基本就要你了，剩下都是走流程。</p><p>三面的面试也是一轮技术面，不过是技术人员给我讲业务和技术，大概他们这个组属于百度移动端的一个组，属于push流推荐组，入职以后大概会先从数据处理开始，然后开始调模型，或者应用模型之类的，最后上线还要写c++，大概问了一下在字节实习的同学，大概业务和技术流程差不多。</p></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深度学习基础教程笔记</title>
+      <link href="/2021/10/31/shen-du-xue-xi-ji-chu-jiao-cheng-bi-ji/"/>
+      <url>/2021/10/31/shen-du-xue-xi-ji-chu-jiao-cheng-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<p>本文来自：<a href="https://microsoft.github.io/ai-edu" target="_blank" rel="noopener">https://microsoft.github.io/ai-edu</a></p><h4 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h4><h5 id="交叉熵损失函数"><a href="#交叉熵损失函数" class="headerlink" title="交叉熵损失函数"></a>交叉熵损失函数</h5><p>是Shannon信息论中一个重要概念，主要用于度量两个概率分布间的差异性信息。在信息论中，交叉熵是表示两个概率分布 $$p,q $$ 的差异，其中 $ p$ 表示真实分布，$q$ 表示预测分布，那么 $H(p,q)$ 就称为交叉熵：<br>$$<br>H(p,q)=\sum_i p_i \cdot \ln {1 \over q_i} = - \sum_i p_i \ln q_i \tag{1}<br>$$</p><h5 id="二分类问题"><a href="#二分类问题" class="headerlink" title="二分类问题"></a>二分类问题</h5><p>$$<br>J= - \sum_{i=1}^m [y_i \ln a_i + (1-y_i) \ln (1-a_i)] \tag{10}<br>$$</p><h4 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h4><h4 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h4><ul><li>因变量不为连续数值，使用逻辑回归</li><li></li></ul><h5 id="二分类"><a href="#二分类" class="headerlink" title="二分类"></a>二分类</h5><ul><li>为什么要通过logistic分类计算，而不是直接用z拟合？<ul><li>通过分类计算，这两个数值的含义是这两个样本在分类区内的概率，前者概率为 99.3，偏向正例，后者概率为 26.9，偏向负例。然后再计算损失函数，就可以得到神经网络可以理解的反向传播误差。而通过单纯的z，无法知道误差传播力度</li><li></li></ul></li></ul><h4 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h4><ul><li><p>logistic 函数</p></li><li><p>sigmoid</p><ul><li>会出现梯度消失</li></ul></li><li><p>tanh 函数</p></li><li><p>ReLU 函数</p><ul><li>反向导数恒等于1，更加有效率的反向传播梯度值，收敛速度快；</li><li>避免梯度消失问题；</li><li>计算简单，速度快；</li><li>活跃度的分散性使得神经网络的整体计算成本下降</li></ul></li><li><p>leaky relu</p><ul><li>而且由于给了z&lt;0时一个比较小的梯度α,使得z&lt;0时依旧可以进行梯度传递和更新 </li><li>避免神经元“死”掉的问题。 </li></ul></li><li><p>softplus 函数</p></li></ul><h4 id="非线性回归问题"><a href="#非线性回归问题" class="headerlink" title="非线性回归问题"></a>非线性回归问题</h4><h4 id="测试与验证"><a href="#测试与验证" class="headerlink" title="测试与验证"></a>测试与验证</h4><ul><li><p>测试集</p><ul><li>寻找最优的网络深度</li><li>或者决定反向传播算法的停止点</li><li>或者在神经网络中选择隐藏层神经元的数量</li><li>在普通的机器学习中常用的交叉验证（Cross Validation）就是把训练数据集本身再细分成不同的验证数据集去训练模型。</li></ul></li><li><p>交叉验证</p><ul><li>在传统的机器学习中，我们经常用交叉验证的方法，比如把数据分成10份，V1∼V10，其中 V1∼V9 用来训练，V10 用来验证。然后用 V2∼V10 做训练，V1 做验证……如此我们可以做10次训练和验证，大大增加了模型的可靠性。 </li><li></li></ul><p><img src="https://github.com/microsoft/ai-edu/raw/master/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/A2-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E7%AC%AC4%E6%AD%A5%20-%20%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/img/9/nn.png" alt="img"> </p><p><img src="https://github.com/microsoft/ai-edu/raw/master/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/A2-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E7%AC%AC4%E6%AD%A5%20-%20%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/img/9/backward.png" alt="img"> </p></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常见操作命令集合</title>
+      <link href="/2021/10/30/hexo-command/"/>
+      <url>/2021/10/30/hexo-command/</url>
+      
+        <content type="html"><![CDATA[<h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><h3 id="github-操作"><a href="#github-操作" class="headerlink" title="github 操作"></a>github 操作</h3><pre><code>git config --global user.name "zhdeskbook"git config --global user.email "zhbuaa0@buaa.edu.cn"</code></pre><h5 id="生成ssh-key"><a href="#生成ssh-key" class="headerlink" title="生成ssh-key"></a>生成ssh-key</h5><pre><code>ssh-keygen -t rsa -C "zhbuaa0@buaa.edu.cn"</code></pre><h5 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h5><pre><code>ssh -T git@github.com</code></pre><h5 id="出现错误"><a href="#出现错误" class="headerlink" title="出现错误"></a>出现错误</h5><pre><code>fatal: unable to access 'https://github.com/zhbuaa0/zhbuaa0.github.io.git/': OpenSSL SSL_read: Connection was aborted, errno 10053</code></pre><pre><code>git config --global http.proxygit config --global --unset http.proxy</code></pre><h3 id="HEXO-配置"><a href="#HEXO-配置" class="headerlink" title="HEXO 配置"></a>HEXO 配置</h3><ul><li><p>node.js 12.14安装</p></li><li><p>添加环境变量</p><pre><code> C:\Program Files\nodejs</code></pre></li><li><p>clone 框架仓库</p><pre><code></code></pre><p>本文主要给自己看，用来记录配置hexo的经历<br>主题参考:<a href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p></li></ul><h3 id="2021年10月1日以后配置问题"><a href="#2021年10月1日以后配置问题" class="headerlink" title="2021年10月1日以后配置问题"></a>2021年10月1日以后配置问题</h3><p>本菜鸡完全没搞懂git机制,github默认为branch main,但是10月1号以后默认push上去后是master branch,但是任何和github.io相关都是在main branch,所以还需要讲pages的默认目录改为branch！</p><h3 id="hexo-基本操作"><a href="#hexo-基本操作" class="headerlink" title="hexo 基本操作"></a>hexo 基本操作</h3><pre><code>    hexo clean    hexo g    hexo d    hexo new "article1"</code></pre><h3 id="web框架配置"><a href="#web框架配置" class="headerlink" title="web框架配置"></a>web框架配置</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于夜雨叶明的故事</title>
+      <link href="/2021/10/30/guan-yu-ye-yu-xie-ming-de-gu-shi/"/>
+      <url>/2021/10/30/guan-yu-ye-yu-xie-ming-de-gu-shi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Q0-自我介绍一下吧"><a href="#Q0-自我介绍一下吧" class="headerlink" title="Q0:自我介绍一下吧"></a>Q0:自我介绍一下吧</h3><p>性格可能有点社交牛逼症，活得很单纯和赤诚，但是内心其实很孤独，很难找到能够共鸣的灵魂，但可能对于我孤独是一种快乐，也可以能是一种渴望。喜欢尝试新鲜事物，也愿意把时间花在有意义能提升自己的方面，无论是见识人与观察世界还是学习知识和技巧，想做一点能够改变世界的事情，比如写一本关于人生思考的书，比如做出一个超牛的算法架构。<br>认知到自己的平凡与普通，但是也在不断认知自己，变得不断成熟，不断成长，反而很喜欢自己的平凡，享受自己的生活。对自己有着清楚的看法，也会思考自己该做什么，也会为之努力。所以我更多是一个倾诉者，而不是一个聆听者。有自己的主见和看法，但是也尊重其他人的选择。<br>前阵子一直在健身，最近比较忙，爱好涉猎太广泛了，玩得很多但是都不精通，可能游戏打得还行，德州打得还行，代码水平可以，具有小镇做题家的优良传统。</p><h3 id="博客的内容"><a href="#博客的内容" class="headerlink" title="博客的内容"></a>博客的内容</h3><p>主要是记录一些技术相关的东西，分享一下自己对于人生的看法，对于一些客观事物的看法。文字对我来说，是发泄工具，也是武器，也是一种传达记录我思想变化的载体。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一篇博客</title>
+      <link href="/2020/01/14/5w2h-godweiyang/"/>
+      <url>/2020/01/14/5w2h-godweiyang/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/medias/contact.jpg" alt=""></p><h2 id="感谢何老师的指点！"><a href="#感谢何老师的指点！" class="headerlink" title="感谢何老师的指点！"></a>感谢何老师的指点！</h2><h3 id="找图网站"><a href="#找图网站" class="headerlink" title="找图网站"></a>找图网站</h3><p><a href="https://wallhaven.cc/" target="_blank" rel="noopener">https://wallhaven.cc/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
